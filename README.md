@@ -50,8 +50,6 @@ protein_tool/
   core/
     calculators/beer_lambert.py
     tool_registry.py
-tests/
-  test_beer_lambert.py
 requirements.txt
 README.md
 TOOL_TEMPLATE.md
