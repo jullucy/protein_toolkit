@@ -56,11 +56,3 @@ requirements.txt
 README.md
 TOOL_TEMPLATE.md
 ```
-
-## Next steps
-- Add a **Standard Curve** module (import CSV, linear fit + residuals).
-- Introduce a **Background worker** for long fits so the UI never freezes.
-- Add **Export** (PNG/SVG for plots, CSV for data).
-- Optional: integrate **Plotly** with `QWebEngineView` for interactive charts.
-
-Happy building!
