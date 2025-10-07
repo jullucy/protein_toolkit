@@ -1,6 +1,4 @@
-# Protein Tool (Desktop Starter)
-
-A tiny starter desktop app for your protein science toolkit using **PySide6 (Qt)** and **Matplotlib**.
+# Protein Tool
 
 ## Features in this starter
 - **Start Menu**: Choose between different protein science tools
