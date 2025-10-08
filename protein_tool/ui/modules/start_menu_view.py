@@ -118,7 +118,7 @@ class StartMenuView(QWidget):
         # Define available tools
         self.tools = [
             ("Beer-Lambert Calculator", "Calculate absorbance using\nBeer-Lambert law (A = ε·l·c)", "beer_lambert"),
-            ("Standard Curve", "Create calibration curves\nfrom experimental data", "standard_curve"),
+            ("Thermodynamics Calculator", "Calculate ΔG, ΔH, ΔS, T, and K\nfor chemical reactions", "thermodynamics"),
             ("Protein Calculator", "Calculate protein properties\n(MW, pI, extinction coeff.)", "protein_calc"),
             ("Dilution Calculator", "Calculate dilution ratios\nand final concentrations", "dilution_calc")
         ]
@@ -131,7 +131,7 @@ class StartMenuView(QWidget):
             btn.clicked.connect(lambda checked, tid=tool_id: self.on_tool_selected(tid))
             
             # Disable buttons for tools not yet implemented
-            if tool_id != "beer_lambert":
+            if tool_id not in ["beer_lambert", "thermodynamics"]:
                 btn.setEnabled(False)
                 btn.setStyleSheet(btn.styleSheet() + """
                     QPushButton:disabled {

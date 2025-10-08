@@ -1,8 +1,10 @@
 from PySide6.QtWidgets import QMainWindow, QApplication, QMenuBar, QStackedWidget
 from PySide6.QtGui import QAction
 from .ui.modules.beer_lambert_view import BeerLambertView
+from .ui.modules.thermodynamics_view import ThermodynamicsView
 from .ui.modules.start_menu_view import StartMenuView
 from .viewmodels.beer_lambert_vm import BeerLambertVM
+from .viewmodels.thermodynamics_vm import ThermodynamicsViewModel
 from .core.tool_registry import tool_registry
 
 class MainWindow(QMainWindow):
@@ -40,6 +42,13 @@ class MainWindow(QMainWindow):
             return view
         
         tool_registry.register_tool("beer_lambert", "Beer-Lambert Calculator", create_beer_lambert_tool)
+        
+        def create_thermodynamics_tool():
+            vm = ThermodynamicsViewModel()
+            view = ThermodynamicsView(vm)
+            return view
+        
+        tool_registry.register_tool("thermodynamics", "Thermodynamics Tool", create_thermodynamics_tool)
         
         # Placeholder functions for future tools
         def create_placeholder_tool():

@@ -43,12 +43,20 @@ protein_tool/
   app.py
   main_window.py
   ui/
-    common/mpl_plot_widget.py
-    modules/beer_lambert_view.py
-    modules/start_menu_view.py
-  viewmodels/beer_lambert_vm.py
+    common/
+      mpl_plot_widget.py
+      styles.py
+    modules/
+      beer_lambert_view.py
+      start_menu_view.py
+      thermodynamics_view.py
+  viewmodels/
+    beer_lambert_vm.py
+    thermodynamics_vm.py
   core/
-    calculators/beer_lambert.py
+    calculators/
+      beer_lambert.py
+      thermodynamics.py
     tool_registry.py
 requirements.txt
 README.md
